@@ -1,9 +1,9 @@
 # start_frontend
-Front-end starter Pack for creating websites or web applicaiton with html, scss and JavaScript.
+AUS UK VISA applicaiton with html, scss and JavaScript (FRONTEND).
 
 ## User Manual:
-   1. `git clone https://github.com/unimrgm/start_frontend.git`
-   2. `cd start_frontend`
+   1. `git clone https://github.com/unimrgm/aus_uk_visa.git`
+   2. `cd aus_uk_visa`
    3. `npm install`
    4. `npm start`
    
