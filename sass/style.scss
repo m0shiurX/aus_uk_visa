@@ -1,10 +1,220 @@
-$primary: #567433;
+// Color variables
+$darkest: #2e2e2e;
+$darker: #454545;
+$dark: #000000;
+
+$lightest: #FFF;
+$lighter: #FFFFFF;
+$light: #FFF;
+
+$yellow: #ebc854;
+$bgcolor: #e9e5dc;
+
+// Other Variables
+$darkest_font: #000;
+$darker_font: #a0a09e;
+$dark_font: #fbfbfb;
+
+$border : #727272;
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body{
-    background-color: $primary;
-    
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $bgcolor;
+    .container{
+        margin: 0 auto;
+        max-width: 1100px;
+        header{
+            .slim_head{
+                background: $darkest;
+                color: $darker_font;
+                height: 35px;
+                font-size: .8em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p>.language{
+                    color: $yellow;
+                }
+            }
+            .top_head{
+                position: relative;                
+                background: $darker;
+                color: $dark_font;
+                height: 145px;
+                font-size: .8em;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px dashed $light;
+                .logo{
+                    margin-left: 1em;
+                    padding: 1em .5em;
+                    border: 1px dashed $border;
+                }
+                .navigation{
+                    display: flex;
+                    .singleitem{
+                        display: flex;
+                        align-items: center;
+                        padding-left: 5px;
+                        border-right: 2px solid $border;
+                        &:last-child{
+                            border: none;
+                        }
+                        .icon{
+                            padding: 0 .5em;
+                            height: 30px;
+                        }
+                        .linkntext{
+                            display: flex;
+                            flex-direction: column;
+                            padding-right: 10px;
+                            a:link{
+                                color: $dark_font;
+                                font-size: 12px;
+                                text-decoration: none;
+                            }
+                            span{
+                                font-size: 10px;
+                                color: $darker_font;
+                            }
+                            .selection{
+                                width: 130px;
+                                height: 20px;
+                                border: 1px solid #fff;
+                                background-color: $darker;
+                                color: #ffffff;
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                }
+                nav{
+                    height: 70px;
+                    position: absolute;
+                    bottom: -35px;
+                    width: 90%;
+                    left: 50px;
+                    background-color: $light; 
+                    ul{
+                        text-align: center;
+                        margin: 25px auto;
+                        li{
+                            display: inline-block;
+                            padding: 0 10px;
+                            font-size: 16px;
+                            a{
+                                color: $darker;
+                                text-decoration: none;
+                                &:hover{
+                                    color: $yellow;
+                                    border-bottom: 1px dashed $yellow;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        main{
+            .apply{
+                height: 600px;
+                width: 100%;
+                background: url(/css/img/bg.jpg) no-repeat;
+                background-size: 100% 600px;
+                display: flex;
+                .content{
+                    margin: auto;
+                    height: 500px;
+                    width: 1100px;
+                    background-color: #fff;
+                    opacity: .7;
+                    h1{
+                        font-size: 40px;
+                        text-align: center;
+                        padding-top: 60px;
+                        color: $darker;
+                        font-weight: 500;
+                    }
+                    h4{
+                        font-size: 20px;
+                        padding-top: 20px;
+                        text-align: center;
+                        color: $darker;
+                        font-weight: 400;
+                    }
+                    .paragraph{
+                        max-width: 900px;
+                        margin: 40px auto;
+                        border: 3px double $darker;
+                        padding: 1em;
+                        p{
+                            padding-bottom: 1em; 
+                        }
+                    }
+                    .btn{
+                        text-decoration: none;
+                        padding: 1em;
+                        background-color: transparent;
+                        border: 1px solid #000;
+                        margin: 0 auto;
+                        width: 180px;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+
+        }
+        footer{
+            background-color: $darker;
+            nav{
+                padding: 1em;
+                display: flex;
+                justify-content: space-between;
+                height: 100px;
+                p{
+                    color: $darker_font;
+                    font-size: 14px;
+                }
+                ul{
+                    li{
+                        display: inline-block;
+                        padding: 0 10px;
+                        font-size: 16px;
+                        a{
+                            color: $darker_font;
+                            text-decoration: none;
+                            &:hover{
+                                color: $yellow;
+                                border-bottom: 1px dashed $yellow;
+                            }
+                        }
+                    }
+                }
+            }
+            .content{
+                padding: 1em;
+                font-size: .8em;                
+                p{
+                    color: $darker_font;
+                }
+            }
+            .slim_footer{
+                background: $darkest;
+                color: $darker_font;
+                height: 35px;
+                font-size: .8em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
 }

@@ -1,21 +1,21 @@
 {
-  "name": "start_frontend",
+  "name": "ausukvisa",
   "version": "1.0.0",
-  "description": "Starter pack for frontend website and web application",
+  "description": "AUS UK Visa Application",
   "main": "index.html",
   "scripts": {
     "start": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/unimrgm/start_frontend.git"
+    "url": "git://github.com/unimrgm/aus_uk_visa.git"
   },
   "author": "Moshiur Rahman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unimrgm/start_frontend/issues"
+    "url": "https://github.com/unimrgm/aus_uk_visa/issues"
   },
-  "homepage": "https://github.com/unimrgm/start_frontend#readme",
+  "homepage": "https://github.com/unimrgm/aus_uk_visa#readme",
   "dependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
