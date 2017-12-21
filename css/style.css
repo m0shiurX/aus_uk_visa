@@ -205,6 +205,161 @@ body {
           display: block;
           text-align: center;
           color: #FFF; }
+    body .container main .qasection .content {
+      padding-top: 80px; }
+      body .container main .qasection .content h1 {
+        padding: 30px 0;
+        text-align: center;
+        border-top: 1px dotted #454545;
+        border-bottom: 1px dotted #454545;
+        color: #454545;
+        font-weight: 400; }
+      body .container main .qasection .content .qa {
+        padding-top: 100px; }
+        body .container main .qasection .content .qa table tr td {
+          border-top: 1px dotted #454545;
+          border-left: 1px dotted #454545;
+          padding: 20px;
+          text-align: justify;
+          font-size: 12px; }
+          body .container main .qasection .content .qa table tr td.head {
+            font-weight: 700;
+            font-size: 16px;
+            width: 100px;
+            text-align: center; }
+          body .container main .qasection .content .qa table tr td:last-child {
+            border-right: 1px dotted #454545; }
+        body .container main .qasection .content .qa table tr:nth-child(even) {
+          background-color: #f1efe9; }
+        body .container main .qasection .content .qa table tr:last-child td {
+          border-bottom: 1px dotted #454545; }
+      body .container main .qasection .content .button {
+        display: flex;
+        padding: 50px 0 100px 0; }
+        body .container main .qasection .content .button .btn {
+          text-decoration: none;
+          padding: 1em;
+          background-color: #454545;
+          margin: auto;
+          width: 280px;
+          display: block;
+          text-align: center;
+          color: #FFF; }
+    body .container main .contact {
+      background: url(/css/img/contact.jpg) no-repeat;
+      background-size: 100% 600px; }
+      body .container main .contact .content {
+        padding-top: 50px; }
+        body .container main .contact .content h1 {
+          padding: 30px 0;
+          text-align: center;
+          border-top: 1px dotted #FFF;
+          border-bottom: 1px dotted #FFF;
+          color: #FFF;
+          font-weight: 400;
+          font-size: 36px; }
+        body .container main .contact .content .form {
+          padding: 50px;
+          display: flex;
+          flex-direction: column; }
+          body .container main .contact .content .form .placeholder {
+            margin: auto;
+            padding: 1em;
+            background-color: #000;
+            opacity: .7;
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-content: stretch; }
+            body .container main .contact .content .form .placeholder .name {
+              margin: auto;
+              display: flex;
+              flex-direction: row;
+              align-content: stretch; }
+              body .container main .contact .content .form .placeholder .name input {
+                width: 330px;
+                margin: 2px;
+                padding: .5em 1em; }
+            body .container main .contact .content .form .placeholder .passport {
+              margin: auto;
+              display: flex;
+              flex-direction: row; }
+              body .container main .contact .content .form .placeholder .passport input {
+                width: 330px;
+                margin: 2px;
+                padding: .5em 1em; }
+            body .container main .contact .content .form .placeholder .textarea {
+              margin: 5px auto;
+              display: flex; }
+              body .container main .contact .content .form .placeholder .textarea input {
+                margin: 2px;
+                padding: .5em 1em; }
+          body .container main .contact .content .form .button {
+            display: flex;
+            padding: 30px 0 100px 0; }
+            body .container main .contact .content .form .button .btn {
+              text-decoration: none;
+              padding: 1em;
+              background-color: #FFF;
+              margin: auto;
+              width: 280px;
+              display: block;
+              text-align: center;
+              color: #454545; }
+    body .container main .whysection .content {
+      padding-top: 80px; }
+      body .container main .whysection .content h1 {
+        padding: 30px 0;
+        text-align: center;
+        border-top: 1px dotted #454545;
+        border-bottom: 1px dotted #454545;
+        color: #454545;
+        font-weight: 400; }
+      body .container main .whysection .content .paragraph {
+        padding: 1em; }
+        body .container main .whysection .content .paragraph p {
+          font-size: 18px;
+          line-height: 26px; }
+      body .container main .whysection .content .button {
+        display: flex;
+        padding: 50px 0 100px 0; }
+        body .container main .whysection .content .button .btn {
+          text-decoration: none;
+          padding: 1em;
+          background-color: #454545;
+          margin: auto;
+          width: 280px;
+          display: block;
+          text-align: center;
+          color: #FFF; }
+    body .container main .applyvisa {
+      height: 150px;
+      background-color: #ebc854;
+      margin: 50px 0; }
+      body .container main .applyvisa .content {
+        display: flex;
+        justify-content: space-around; }
+        body .container main .applyvisa .content .paragraph {
+          margin: auto; }
+        body .container main .applyvisa .content .button {
+          display: flex;
+          padding: 50px 20px 50px 0; }
+          body .container main .applyvisa .content .button .btn {
+            text-decoration: none;
+            padding: 1em;
+            background-color: #454545;
+            margin: auto;
+            width: 280px;
+            display: block;
+            text-align: center;
+            color: #FFF; }
+    body .container main .note {
+      padding: 0 0 50px 0; }
+      body .container main .note .paragraph {
+        padding: 1em; }
+        body .container main .note .paragraph p {
+          font-size: .8em;
+          text-align: center; }
     body .container footer {
       background-color: #454545; }
       body .container footer nav {

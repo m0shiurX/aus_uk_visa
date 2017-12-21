@@ -230,7 +230,7 @@ body{
                         display: flex;
                         flex-direction: row;
                         img{
-                            width: 400px;;
+                            width: 400px;
                             height: 400px;
                             margin-right: 100px;
                             opacity: .7;
@@ -270,6 +270,210 @@ body{
                             text-align: center;
                             color: $light;
                         }
+                    }
+                }
+            }
+            .qasection{
+                .content{
+                    padding-top: 80px;
+                    h1{
+                        padding: 30px 0;
+                        text-align: center;
+                        border-top: 1px dotted $darker;
+                        border-bottom: 1px dotted $darker;
+                        color: $darker;
+                        font-weight: 400;
+                    }
+                    .qa{
+                        padding-top: 100px;
+                        table{
+                            tr{
+                                td{
+                                    border-top: 1px dotted $darker;
+                                    border-left: 1px dotted $darker;
+                                    padding: 20px;
+                                    text-align: justify;
+                                    font-size: 12px;
+                                    &.head{
+                                        font-weight: 700;
+                                        font-size: 16px;
+                                        width: 100px;
+                                        text-align: center;
+                                    }
+                                    &:last-child{
+                                        border-right: 1px dotted $darker;
+                                    }
+                                }
+                                &:nth-child(even){
+                                    background-color: #f1efe9;
+                                }
+                                &:last-child{
+                                    td{
+                                        border-bottom: 1px dotted $darker;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .button{
+                        display: flex;
+                        padding: 50px 0 100px 0;
+                        .btn{
+                            text-decoration: none;
+                            padding: 1em;
+                            background-color: $darker;
+                            margin: auto;
+                            width: 280px;
+                            display: block;
+                            text-align: center;
+                            color: $light;
+                        }
+                    }
+                }
+            }
+            .contact{
+                background: url(/css/img/contact.jpg) no-repeat;
+                background-size: 100% 600px;
+                .content{
+                    padding-top: 50px;
+                    h1{
+                        padding: 30px 0;
+                        text-align: center;
+                        border-top: 1px dotted $light;
+                        border-bottom: 1px dotted $light;
+                        color: $light;
+                        font-weight: 400;
+                        font-size: 36px;
+                    }
+                    .form{
+                        padding: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        .placeholder{
+                            margin: auto;
+                            padding: 1em;
+                            background-color: #000;
+                            opacity: .7;
+                            width: 700px;
+                            display: flex;
+                            flex-direction: column;
+                            align-content: stretch;
+                            .name{
+                                margin: auto;
+                                display: flex;
+                                flex-direction: row;
+                                align-content: stretch;
+                                input{
+                                    width: 330px;
+                                    margin: 2px;
+                                    padding: .5em 1em;
+                                }
+                            }
+                            .passport{
+                                margin: auto;                                
+                                display: flex;
+                                flex-direction: row;
+                                input{
+                                    width: 330px;
+                                    margin: 2px;
+                                    padding: .5em 1em;
+                                }
+                            }
+                            .textarea{
+                                margin: 5px auto;                                
+                                display: flex;
+                                input{
+                                    margin: 2px;
+                                    padding: .5em 1em;
+                                }
+                            }
+                        }
+
+                        .button{
+                            display: flex;
+                            padding: 30px 0 100px 0;
+                            .btn{
+                                text-decoration: none;
+                                padding: 1em;
+                                background-color: $light;
+                                margin: auto;
+                                width: 280px;
+                                display: block;
+                                text-align: center;
+                                color: $darker;
+                            }
+                        }
+                    }
+                }
+            }
+            .whysection{
+                .content{
+                    padding-top: 80px;
+                    h1{
+                        padding: 30px 0;
+                        text-align: center;
+                        border-top: 1px dotted $darker;
+                        border-bottom: 1px dotted $darker;
+                        color: $darker;
+                        font-weight: 400;
+                    }
+                    .paragraph{
+                        padding: 1em;
+                        p{
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
+
+                    }
+                    .button{
+                        display: flex;
+                        padding: 50px 0 100px 0;
+                        .btn{
+                            text-decoration: none;
+                            padding: 1em;
+                            background-color: $darker;
+                            margin: auto;
+                            width: 280px;
+                            display: block;
+                            text-align: center;
+                            color: $light;
+                        }
+                    }
+                }
+            }
+            .applyvisa{
+                height: 150px;
+                background-color: $yellow;
+                margin: 50px 0;
+                .content{
+                    display: flex;
+                    justify-content: space-around;
+                    .paragraph {
+                        margin: auto;
+                    }
+                    .button{
+                        display: flex;
+                        padding: 50px 20px 50px 0;
+                        .btn{
+                            text-decoration: none;
+                            padding: 1em;
+                            background-color: $darker;
+                            margin: auto;
+                            width: 280px;
+                            display: block;
+                            text-align: center;
+                            color: $light;
+                        }
+                    }
+                }
+            }
+            .note{
+                padding: 0 0 50px 0;
+                .paragraph{
+                    padding: 1em;
+                    p{
+                        font-size: .8em;
+                        text-align: center;
                     }
                 }
             }
