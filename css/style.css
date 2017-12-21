@@ -6,390 +6,391 @@
 body {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
   background-color: #e9e5dc; }
-  body .container {
-    margin: 0 auto;
-    max-width: 1100px; }
-    body .container header .slim_head {
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px; }
+  .container header .slim_head {
+    background: #2e2e2e;
+    color: #a0a09e;
+    height: 35px;
+    font-size: .8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .container header .slim_head p > .language {
+      color: #ebc854; }
+  .container header .top_head {
+    position: relative;
+    background: #454545;
+    color: #fbfbfb;
+    height: 145px;
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed #FFF; }
+    .container header .top_head .logo {
+      margin-left: 1em;
+      padding: 1em .5em;
+      border: 1px dashed #727272; }
+    .container header .top_head .navigation {
+      display: flex; }
+      .container header .top_head .navigation .singleitem {
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        border-right: 2px solid #727272; }
+        .container header .top_head .navigation .singleitem:last-child {
+          border: none; }
+        .container header .top_head .navigation .singleitem .icon {
+          padding: 0 .5em;
+          height: 30px; }
+        .container header .top_head .navigation .singleitem .linkntext {
+          display: flex;
+          flex-direction: column;
+          padding-right: 10px; }
+          .container header .top_head .navigation .singleitem .linkntext a {
+            color: #fbfbfb;
+            font-size: 12px;
+            text-decoration: none; }
+          .container header .top_head .navigation .singleitem .linkntext span {
+            font-size: 10px;
+            color: #a0a09e; }
+          .container header .top_head .navigation .singleitem .linkntext .selection {
+            width: 130px;
+            height: 20px;
+            border: 1px solid #fff;
+            background-color: #454545;
+            color: #ffffff;
+            padding-left: 15px; }
+    .container header .top_head nav {
+      height: 70px;
+      position: absolute;
+      bottom: -35px;
+      width: 90%;
+      left: 50px;
+      background-color: #FFF; }
+      .container header .top_head nav ul {
+        text-align: center;
+        margin: 25px auto; }
+        .container header .top_head nav ul li {
+          display: inline-block;
+          padding: 0 15px;
+          font-size: 16px;
+          border-right: 1px solid #454545; }
+          .container header .top_head nav ul li:last-child {
+            border: none; }
+          .container header .top_head nav ul li a {
+            color: #454545;
+            text-decoration: none; }
+            .container header .top_head nav ul li a:hover {
+              color: #ebc854;
+              border-bottom: 1px dashed #ebc854; }
+  .container main .apply {
+    height: 600px;
+    width: 100%;
+    background: url(/css/img/bg.jpg) no-repeat;
+    background-size: 100% 600px;
+    display: flex; }
+    .container main .apply .content {
+      margin: auto;
+      height: 500px;
+      width: 1100px;
+      background-color: #fff;
+      opacity: .7; }
+      .container main .apply .content h1 {
+        font-size: 40px;
+        text-align: center;
+        padding-top: 60px;
+        color: #454545;
+        font-weight: 500; }
+      .container main .apply .content h4 {
+        font-size: 20px;
+        padding-top: 20px;
+        text-align: center;
+        color: #454545;
+        font-weight: 400; }
+      .container main .apply .content .paragraph {
+        max-width: 900px;
+        margin: 40px auto;
+        border: 3px double #454545;
+        padding: 1em; }
+        .container main .apply .content .paragraph p {
+          padding-bottom: 1em; }
+      .container main .apply .content .btn {
+        text-decoration: none;
+        padding: 1em;
+        background-color: transparent;
+        border: 1px solid #000;
+        margin: 0 auto;
+        width: 180px;
+        display: block;
+        text-align: center;
+        color: #454545; }
+  .container main .countrylist {
+    height: 600px;
+    width: 100%;
+    display: flex; }
+    .container main .countrylist .content {
+      margin: auto;
+      width: 1100px; }
+      .container main .countrylist .content .title {
+        font-size: 40px;
+        text-align: center;
+        padding: 30px;
+        color: #454545;
+        font-weight: 500;
+        border: 1px dotted #454545; }
+      .container main .countrylist .content .subtitle {
+        font-size: 20px;
+        padding: 30px 0;
+        text-align: center;
+        color: #454545;
+        font-weight: 400; }
+      .container main .countrylist .content table {
+        width: 900px;
+        margin: auto; }
+        .container main .countrylist .content table tr {
+          font-size: 12px;
+          font-style: normal; }
+          .container main .countrylist .content table tr th {
+            text-align: center;
+            border: 1px solid #D5D5D5;
+            padding: 10px;
+            font-weight: normal;
+            background-color: #EAEAEA; }
+          .container main .countrylist .content table tr td {
+            text-align: center;
+            border-top: 1px solid #D5D5D5;
+            border-bottom: 1px solid #D5D5D5;
+            padding: 10px;
+            background-color: #fff; }
+  .container main .info .content {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebc854; }
+    .container main .info .content .information {
+      display: flex;
+      flex-direction: row; }
+      .container main .info .content .information img {
+        width: 380px;
+        height: 420px;
+        margin-right: 10px;
+        opacity: .7; }
+      .container main .info .content .information .paragraph {
+        margin: auto; }
+        .container main .info .content .information .paragraph h1 {
+          padding: 30px 0;
+          text-align: center;
+          border-top: 1px dotted #454545;
+          border-bottom: 1px dotted #454545;
+          color: #454545; }
+        .container main .info .content .information .paragraph p {
+          padding: 1em;
+          color: #000000;
+          font-size: 14px; }
+        .container main .info .content .information .paragraph ol {
+          margin-left: 2em;
+          color: #000000;
+          font-size: 14px; }
+    .container main .info .content .button {
+      display: flex;
+      padding-bottom: 100px; }
+      .container main .info .content .button .btn {
+        text-decoration: none;
+        padding: 1em;
+        background-color: #454545;
+        margin: auto;
+        width: 280px;
+        display: block;
+        text-align: center;
+        color: #FFF; }
+  .container main .qasection .content {
+    padding-top: 80px; }
+    .container main .qasection .content h1 {
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px dotted #454545;
+      border-bottom: 1px dotted #454545;
+      color: #454545;
+      font-weight: 400; }
+    .container main .qasection .content .qa {
+      padding-top: 100px; }
+      .container main .qasection .content .qa table tr td {
+        border-top: 1px dotted #454545;
+        border-left: 1px dotted #454545;
+        padding: 20px;
+        text-align: justify;
+        font-size: 12px; }
+        .container main .qasection .content .qa table tr td.head {
+          font-weight: 700;
+          font-size: 16px;
+          width: 100px;
+          text-align: center; }
+        .container main .qasection .content .qa table tr td:last-child {
+          border-right: 1px dotted #454545; }
+      .container main .qasection .content .qa table tr:nth-child(even) {
+        background-color: #f1efe9; }
+      .container main .qasection .content .qa table tr:last-child td {
+        border-bottom: 1px dotted #454545; }
+    .container main .qasection .content .button {
+      display: flex;
+      padding: 50px 0 100px 0; }
+      .container main .qasection .content .button .btn {
+        text-decoration: none;
+        padding: 1em;
+        background-color: #454545;
+        margin: auto;
+        width: 280px;
+        display: block;
+        text-align: center;
+        color: #FFF; }
+  .container main .contact {
+    background: url(/css/img/contact.jpg) no-repeat;
+    background-size: 100% 600px; }
+    .container main .contact .content {
+      padding-top: 50px; }
+      .container main .contact .content h1 {
+        padding: 30px 0;
+        text-align: center;
+        border-top: 1px dotted #FFF;
+        border-bottom: 1px dotted #FFF;
+        color: #FFF;
+        font-weight: 400;
+        font-size: 36px; }
+      .container main .contact .content .form {
+        padding: 50px;
+        display: flex;
+        flex-direction: column; }
+        .container main .contact .content .form .placeholder {
+          margin: auto;
+          padding: 1em;
+          background-color: #000;
+          opacity: .7;
+          width: 700px;
+          display: flex;
+          flex-direction: column;
+          align-content: stretch; }
+          .container main .contact .content .form .placeholder .name {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            align-content: stretch; }
+            .container main .contact .content .form .placeholder .name input {
+              width: 330px;
+              margin: 2px;
+              padding: .5em 1em; }
+          .container main .contact .content .form .placeholder .passport {
+            margin: auto;
+            display: flex;
+            flex-direction: row; }
+            .container main .contact .content .form .placeholder .passport input {
+              width: 330px;
+              margin: 2px;
+              padding: .5em 1em; }
+          .container main .contact .content .form .placeholder .textarea {
+            margin: 5px auto;
+            display: flex; }
+            .container main .contact .content .form .placeholder .textarea input {
+              margin: 2px;
+              padding: .5em 1em; }
+        .container main .contact .content .form .button {
+          display: flex;
+          padding: 30px 0 100px 0; }
+          .container main .contact .content .form .button .btn {
+            text-decoration: none;
+            padding: 1em;
+            background-color: #FFF;
+            margin: auto;
+            width: 280px;
+            display: block;
+            text-align: center;
+            color: #454545; }
+  .container main .whysection .content {
+    padding-top: 80px; }
+    .container main .whysection .content h1 {
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px dotted #454545;
+      border-bottom: 1px dotted #454545;
+      color: #454545;
+      font-weight: 400; }
+    .container main .whysection .content .paragraph {
+      padding: 1em; }
+      .container main .whysection .content .paragraph p {
+        font-size: 18px;
+        line-height: 26px; }
+    .container main .whysection .content .button {
+      display: flex;
+      padding: 50px 0 100px 0; }
+      .container main .whysection .content .button .btn {
+        text-decoration: none;
+        padding: 1em;
+        background-color: #454545;
+        margin: auto;
+        width: 280px;
+        display: block;
+        text-align: center;
+        color: #FFF; }
+  .container main .applyvisa {
+    height: 150px;
+    background-color: #ebc854;
+    margin: 50px 0; }
+    .container main .applyvisa .content {
+      display: flex;
+      justify-content: space-around; }
+      .container main .applyvisa .content .paragraph {
+        margin: auto; }
+      .container main .applyvisa .content .button {
+        display: flex;
+        padding: 50px 20px 50px 0; }
+        .container main .applyvisa .content .button .btn {
+          text-decoration: none;
+          padding: 1em;
+          background-color: #454545;
+          margin: auto;
+          width: 280px;
+          display: block;
+          text-align: center;
+          color: #FFF; }
+  .container main .note {
+    padding: 0 0 50px 0; }
+    .container main .note .paragraph {
+      padding: 1em; }
+      .container main .note .paragraph p {
+        font-size: .8em;
+        text-align: center; }
+  .container footer {
+    background-color: #454545; }
+    .container footer nav {
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      height: 100px; }
+      .container footer nav p {
+        color: #a0a09e;
+        font-size: 14px; }
+      .container footer nav ul li {
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 16px; }
+        .container footer nav ul li a {
+          color: #a0a09e;
+          text-decoration: none; }
+          .container footer nav ul li a:hover {
+            color: #ebc854;
+            border-bottom: 1px dashed #ebc854; }
+    .container footer .content {
+      padding: 1em;
+      font-size: .8em; }
+      .container footer .content p {
+        color: #a0a09e; }
+    .container footer .slim_footer {
       background: #2e2e2e;
       color: #a0a09e;
       height: 35px;
       font-size: .8em;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center; }
-      body .container header .slim_head p > .language {
-        color: #ebc854; }
-    body .container header .top_head {
-      position: relative;
-      background: #454545;
-      color: #fbfbfb;
-      height: 145px;
-      font-size: .8em;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px dashed #FFF; }
-      body .container header .top_head .logo {
-        margin-left: 1em;
-        padding: 1em .5em;
-        border: 1px dashed #727272; }
-      body .container header .top_head .navigation {
-        display: flex; }
-        body .container header .top_head .navigation .singleitem {
-          display: flex;
-          align-items: center;
-          padding-left: 5px;
-          border-right: 2px solid #727272; }
-          body .container header .top_head .navigation .singleitem:last-child {
-            border: none; }
-          body .container header .top_head .navigation .singleitem .icon {
-            padding: 0 .5em;
-            height: 30px; }
-          body .container header .top_head .navigation .singleitem .linkntext {
-            display: flex;
-            flex-direction: column;
-            padding-right: 10px; }
-            body .container header .top_head .navigation .singleitem .linkntext a {
-              color: #fbfbfb;
-              font-size: 12px;
-              text-decoration: none; }
-            body .container header .top_head .navigation .singleitem .linkntext span {
-              font-size: 10px;
-              color: #a0a09e; }
-            body .container header .top_head .navigation .singleitem .linkntext .selection {
-              width: 130px;
-              height: 20px;
-              border: 1px solid #fff;
-              background-color: #454545;
-              color: #ffffff;
-              padding-left: 15px; }
-      body .container header .top_head nav {
-        height: 70px;
-        position: absolute;
-        bottom: -35px;
-        width: 90%;
-        left: 50px;
-        background-color: #FFF; }
-        body .container header .top_head nav ul {
-          text-align: center;
-          margin: 25px auto; }
-          body .container header .top_head nav ul li {
-            display: inline-block;
-            padding: 0 15px;
-            font-size: 16px;
-            border-right: 1px solid #454545; }
-            body .container header .top_head nav ul li:last-child {
-              border: none; }
-            body .container header .top_head nav ul li a {
-              color: #454545;
-              text-decoration: none; }
-              body .container header .top_head nav ul li a:hover {
-                color: #ebc854;
-                border-bottom: 1px dashed #ebc854; }
-    body .container main .apply {
-      height: 600px;
-      width: 100%;
-      background: url(/css/img/bg.jpg) no-repeat;
-      background-size: 100% 600px;
-      display: flex; }
-      body .container main .apply .content {
-        margin: auto;
-        height: 500px;
-        width: 1100px;
-        background-color: #fff;
-        opacity: .7; }
-        body .container main .apply .content h1 {
-          font-size: 40px;
-          text-align: center;
-          padding-top: 60px;
-          color: #454545;
-          font-weight: 500; }
-        body .container main .apply .content h4 {
-          font-size: 20px;
-          padding-top: 20px;
-          text-align: center;
-          color: #454545;
-          font-weight: 400; }
-        body .container main .apply .content .paragraph {
-          max-width: 900px;
-          margin: 40px auto;
-          border: 3px double #454545;
-          padding: 1em; }
-          body .container main .apply .content .paragraph p {
-            padding-bottom: 1em; }
-        body .container main .apply .content .btn {
-          text-decoration: none;
-          padding: 1em;
-          background-color: transparent;
-          border: 1px solid #000;
-          margin: 0 auto;
-          width: 180px;
-          display: block;
-          text-align: center;
-          color: #454545; }
-    body .container main .countrylist {
-      height: 600px;
-      width: 100%;
-      display: flex; }
-      body .container main .countrylist .content {
-        margin: auto;
-        width: 1100px; }
-        body .container main .countrylist .content .title {
-          font-size: 40px;
-          text-align: center;
-          padding: 30px;
-          color: #454545;
-          font-weight: 500;
-          border: 1px dotted #454545; }
-        body .container main .countrylist .content .subtitle {
-          font-size: 20px;
-          padding: 30px 0;
-          text-align: center;
-          color: #454545;
-          font-weight: 400; }
-        body .container main .countrylist .content table {
-          width: 900px;
-          margin: auto; }
-          body .container main .countrylist .content table tr {
-            font-size: 12px;
-            font-style: normal; }
-            body .container main .countrylist .content table tr th {
-              text-align: center;
-              border: 1px solid #D5D5D5;
-              padding: 10px;
-              font-weight: normal;
-              background-color: #EAEAEA; }
-            body .container main .countrylist .content table tr td {
-              text-align: center;
-              border-top: 1px solid #D5D5D5;
-              border-bottom: 1px solid #D5D5D5;
-              padding: 10px;
-              background-color: #fff; }
-    body .container main .info .content {
-      display: flex;
-      flex-direction: column;
-      background-color: #ebc854; }
-      body .container main .info .content .information {
-        display: flex;
-        flex-direction: row; }
-        body .container main .info .content .information img {
-          width: 400px;
-          height: 400px;
-          margin-right: 100px;
-          opacity: .7; }
-        body .container main .info .content .information .paragraph {
-          margin: auto; }
-          body .container main .info .content .information .paragraph h1 {
-            padding: 30px 0;
-            text-align: center;
-            border-top: 1px dotted #454545;
-            border-bottom: 1px dotted #454545;
-            color: #454545; }
-          body .container main .info .content .information .paragraph p {
-            padding: 1em;
-            color: #000000;
-            font-size: 14px; }
-          body .container main .info .content .information .paragraph ol {
-            margin-left: 2em;
-            color: #000000;
-            font-size: 14px; }
-      body .container main .info .content .button {
-        display: flex;
-        padding-bottom: 100px; }
-        body .container main .info .content .button .btn {
-          text-decoration: none;
-          padding: 1em;
-          background-color: #454545;
-          margin: auto;
-          width: 280px;
-          display: block;
-          text-align: center;
-          color: #FFF; }
-    body .container main .qasection .content {
-      padding-top: 80px; }
-      body .container main .qasection .content h1 {
-        padding: 30px 0;
-        text-align: center;
-        border-top: 1px dotted #454545;
-        border-bottom: 1px dotted #454545;
-        color: #454545;
-        font-weight: 400; }
-      body .container main .qasection .content .qa {
-        padding-top: 100px; }
-        body .container main .qasection .content .qa table tr td {
-          border-top: 1px dotted #454545;
-          border-left: 1px dotted #454545;
-          padding: 20px;
-          text-align: justify;
-          font-size: 12px; }
-          body .container main .qasection .content .qa table tr td.head {
-            font-weight: 700;
-            font-size: 16px;
-            width: 100px;
-            text-align: center; }
-          body .container main .qasection .content .qa table tr td:last-child {
-            border-right: 1px dotted #454545; }
-        body .container main .qasection .content .qa table tr:nth-child(even) {
-          background-color: #f1efe9; }
-        body .container main .qasection .content .qa table tr:last-child td {
-          border-bottom: 1px dotted #454545; }
-      body .container main .qasection .content .button {
-        display: flex;
-        padding: 50px 0 100px 0; }
-        body .container main .qasection .content .button .btn {
-          text-decoration: none;
-          padding: 1em;
-          background-color: #454545;
-          margin: auto;
-          width: 280px;
-          display: block;
-          text-align: center;
-          color: #FFF; }
-    body .container main .contact {
-      background: url(/css/img/contact.jpg) no-repeat;
-      background-size: 100% 600px; }
-      body .container main .contact .content {
-        padding-top: 50px; }
-        body .container main .contact .content h1 {
-          padding: 30px 0;
-          text-align: center;
-          border-top: 1px dotted #FFF;
-          border-bottom: 1px dotted #FFF;
-          color: #FFF;
-          font-weight: 400;
-          font-size: 36px; }
-        body .container main .contact .content .form {
-          padding: 50px;
-          display: flex;
-          flex-direction: column; }
-          body .container main .contact .content .form .placeholder {
-            margin: auto;
-            padding: 1em;
-            background-color: #000;
-            opacity: .7;
-            width: 700px;
-            display: flex;
-            flex-direction: column;
-            align-content: stretch; }
-            body .container main .contact .content .form .placeholder .name {
-              margin: auto;
-              display: flex;
-              flex-direction: row;
-              align-content: stretch; }
-              body .container main .contact .content .form .placeholder .name input {
-                width: 330px;
-                margin: 2px;
-                padding: .5em 1em; }
-            body .container main .contact .content .form .placeholder .passport {
-              margin: auto;
-              display: flex;
-              flex-direction: row; }
-              body .container main .contact .content .form .placeholder .passport input {
-                width: 330px;
-                margin: 2px;
-                padding: .5em 1em; }
-            body .container main .contact .content .form .placeholder .textarea {
-              margin: 5px auto;
-              display: flex; }
-              body .container main .contact .content .form .placeholder .textarea input {
-                margin: 2px;
-                padding: .5em 1em; }
-          body .container main .contact .content .form .button {
-            display: flex;
-            padding: 30px 0 100px 0; }
-            body .container main .contact .content .form .button .btn {
-              text-decoration: none;
-              padding: 1em;
-              background-color: #FFF;
-              margin: auto;
-              width: 280px;
-              display: block;
-              text-align: center;
-              color: #454545; }
-    body .container main .whysection .content {
-      padding-top: 80px; }
-      body .container main .whysection .content h1 {
-        padding: 30px 0;
-        text-align: center;
-        border-top: 1px dotted #454545;
-        border-bottom: 1px dotted #454545;
-        color: #454545;
-        font-weight: 400; }
-      body .container main .whysection .content .paragraph {
-        padding: 1em; }
-        body .container main .whysection .content .paragraph p {
-          font-size: 18px;
-          line-height: 26px; }
-      body .container main .whysection .content .button {
-        display: flex;
-        padding: 50px 0 100px 0; }
-        body .container main .whysection .content .button .btn {
-          text-decoration: none;
-          padding: 1em;
-          background-color: #454545;
-          margin: auto;
-          width: 280px;
-          display: block;
-          text-align: center;
-          color: #FFF; }
-    body .container main .applyvisa {
-      height: 150px;
-      background-color: #ebc854;
-      margin: 50px 0; }
-      body .container main .applyvisa .content {
-        display: flex;
-        justify-content: space-around; }
-        body .container main .applyvisa .content .paragraph {
-          margin: auto; }
-        body .container main .applyvisa .content .button {
-          display: flex;
-          padding: 50px 20px 50px 0; }
-          body .container main .applyvisa .content .button .btn {
-            text-decoration: none;
-            padding: 1em;
-            background-color: #454545;
-            margin: auto;
-            width: 280px;
-            display: block;
-            text-align: center;
-            color: #FFF; }
-    body .container main .note {
-      padding: 0 0 50px 0; }
-      body .container main .note .paragraph {
-        padding: 1em; }
-        body .container main .note .paragraph p {
-          font-size: .8em;
-          text-align: center; }
-    body .container footer {
-      background-color: #454545; }
-      body .container footer nav {
-        padding: 1em;
-        display: flex;
-        justify-content: space-between;
-        height: 100px; }
-        body .container footer nav p {
-          color: #a0a09e;
-          font-size: 14px; }
-        body .container footer nav ul li {
-          display: inline-block;
-          padding: 0 10px;
-          font-size: 16px; }
-          body .container footer nav ul li a {
-            color: #a0a09e;
-            text-decoration: none; }
-            body .container footer nav ul li a:hover {
-              color: #ebc854;
-              border-bottom: 1px dashed #ebc854; }
-      body .container footer .content {
-        padding: 1em;
-        font-size: .8em; }
-        body .container footer .content p {
-          color: #a0a09e; }
-      body .container footer .slim_footer {
-        background: #2e2e2e;
-        color: #a0a09e;
-        height: 35px;
-        font-size: .8em;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
