@@ -185,11 +185,12 @@ body {
         flex-direction: column; }
         .container main .info .content .information {
           display: flex;
-          flex-direction: row; }
+          flex-direction: row;
+          justify-content: space-between; }
           .container main .info .content .information img {
-            width: 380px;
-            height: 420px;
-            margin-right: 10px;
+            width: 350px;
+            height: 400px;
+            margin-right: 100px;
             opacity: .7; }
           .container main .info .content .information .paragraph {
             margin: auto; }
