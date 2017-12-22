@@ -29,101 +29,108 @@ body{
 }
 .container{
     margin: 0 auto;
-    max-width: 1100px;
+    width: 100%;
     header{
         .slim_head{
             background: $darkest;
-            color: $darker_font;
-            height: 35px;
-            font-size: .8em;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            p>.language{
-                color: $yellow;
+            .looser{
+                height: 35px;
+                max-width: 1100px;
+                margin: 0 auto;
+                color: $darker_font;
+                font-size: .8em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p>.language{
+                    color: $yellow;
+                }
             }
         }
         .top_head{
-            position: relative;                
             background: $darker;
-            color: $dark_font;
-            height: 145px;
-            font-size: .8em;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             border-bottom: 1px dashed $light;
-            .logo{
-                margin-left: 1em;
-                padding: 1em .5em;
-                border: 1px dashed $border;
-            }
-            .navigation{
+            .looser{
+                height: 145px;
+                max-width: 1100px;
+                margin: 0 auto;
+                position: relative;                
+                color: $dark_font;
+                font-size: .8em;
                 display: flex;
-                .singleitem{
-                    display: flex;
-                    align-items: center;
-                    padding-left: 5px;
-                    border-right: 2px solid $border;
-                    &:last-child{
-                        border: none;
-                    }
-                    .icon{
-                        padding: 0 .5em;
-                        height: 30px;
-                    }
-                    .linkntext{
-                        display: flex;
-                        flex-direction: column;
-                        padding-right: 10px;
-                        a{
-                            color: $dark_font;
-                            font-size: 12px;
-                            text-decoration: none;
-                        }
-                        span{
-                            font-size: 10px;
-                            color: $darker_font;
-                        }
-                        .selection{
-                            width: 130px;
-                            height: 20px;
-                            border: 1px solid #fff;
-                            background-color: $darker;
-                            color: #ffffff;
-                            padding-left: 15px;
-                        }
-                    }
+                align-items: center;
+                justify-content: space-between;
+                .logo{
+                    margin-left: 1em;
+                    padding: 1em .5em;
+                    border: 1px dashed $border;
                 }
-            }
-            nav{
-                height: 70px;
-                position: absolute;
-                bottom: -35px;
-                width: 90%;
-                left: 50px;
-                background-color: $light; 
-                ul{
-                    text-align: center;
-                    margin: 25px auto;
-                    li{
-                        display: inline-block;
-                        padding: 0 15px;
-                        font-size: 16px;
-                        border-right: 1px solid $darker;
+                .navigation{
+                    display: flex;
+                    .singleitem{
+                        display: flex;
+                        align-items: center;
+                        padding-left: 5px;
+                        border-right: 2px solid $border;
                         &:last-child{
                             border: none;
                         }
-                        a{
-                            color: $darker;
-                            text-decoration: none;
-                            &:hover{
-                                color: $yellow;
-                                border-bottom: 1px dashed $yellow;
+                        .icon{
+                            padding: 0 .5em;
+                            height: 30px;
+                        }
+                        .linkntext{
+                            display: flex;
+                            flex-direction: column;
+                            padding-right: 10px;
+                            a{
+                                color: $dark_font;
+                                font-size: 12px;
+                                text-decoration: none;
                             }
-                            &.active{
-                                color: $yellow;
-                                border-bottom: 1px dashed $yellow;
+                            span{
+                                font-size: 10px;
+                                color: $darker_font;
+                            }
+                            .selection{
+                                width: 130px;
+                                height: 20px;
+                                border: 1px solid #fff;
+                                background-color: $darker;
+                                color: #ffffff;
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                }
+                nav{
+                    height: 70px;
+                    position: absolute;
+                    bottom: -40px;
+                    width: 1100px;
+                    background-color: $light; 
+                    ul{
+                        text-align: center;
+                        margin: 25px auto;
+                        li{
+                            display: inline-block;
+                            padding: 0 15px;
+                            font-size: 16px;
+                            border-right: 1px solid $darker;
+                            &:last-child{
+                                border: none;
+                            }
+                            a{
+                                color: $darker;
+                                text-decoration: none;
+                                &:hover{
+                                    color: $yellow;
+                                    border-bottom: 1px dashed $yellow;
+                                }
+                                &.active{
+                                    color: $yellow;
+                                    border-bottom: 1px dashed $yellow;
+                                }
                             }
                         }
                     }
@@ -132,17 +139,17 @@ body{
         }
     }
     main{
-        margin-top: 80px;
+        margin: 80px auto;
         .apply{
             height: 600px;
             width: 100%;
-            background: url(/css/img/bg.jpg) no-repeat;
+            background: url(img/bg.jpg) no-repeat;
             background-size: 100% 600px;
             display: flex;
             .content{
                 margin: auto;
-                height: 500px;
                 width: 1100px;
+                height: 500px;
                 background-color: #fff;
                 opacity: .7;
                 h1{
@@ -228,10 +235,12 @@ body{
             }
         }
         .info{
+            background-color: $yellow;
             .content{
+                margin: auto;
+                width: 1100px;
                 display: flex;
                 flex-direction: column;
-                background-color: $yellow;
                 .information{
                     display: flex;
                     flex-direction: row;
@@ -282,6 +291,8 @@ body{
         .qasection{
             .content{
                 padding-top: 80px;
+                margin: auto;
+                width: 1100px;
                 h1{
                     padding: 30px 0;
                     text-align: center;
@@ -338,9 +349,10 @@ body{
             }
         }
         .contact{
-            background: url(/css/img/contact.jpg) no-repeat;
+            background: url(img/contact.jpg) no-repeat;
             background-size: 100% 600px;
             .content{
+                margin: auto;
                 padding-top: 50px;
                 h1{
                     padding: 30px 0;
@@ -415,6 +427,8 @@ body{
         .whysection{
             .content{
                 padding-top: 80px;
+                margin: auto;
+                width: 1100px;
                 h1{
                     padding: 30px 0;
                     text-align: center;
@@ -450,8 +464,10 @@ body{
         .applyvisa{
             height: 150px;
             background-color: $yellow;
-            margin: 50px 0;
+            margin: 50px auto;
             .content{
+                margin: auto;
+                width: 1100px;
                 display: flex;
                 justify-content: space-around;
                 .paragraph {
@@ -488,6 +504,8 @@ body{
             display: flex;
             flex-direction: column;
             height: 500px;
+            width: 1100px;
+            margin: auto;
             h2{
                 font-size: 30px;
                 text-align: left;
@@ -510,16 +528,21 @@ body{
             }
             form{
                 margin: 10px auto;
+                width: 500px;
                 .type{
                     padding: .5em 1em;
                     display: flex;
                     justify-content: space-between;
                     align-items: stretch;
                     label{
-                        padding: .3em 1em;;
+                        padding: .5em 1em;;
                     }
                     input{
-                        padding: .3em 1em;
+                        padding: .5em 1em;
+                        width: 200px;
+                    }
+                    select{
+                        width:200px;
                     }
                 }
                 .button{
@@ -550,6 +573,8 @@ body{
         .faq{
             display: flex;
             flex-direction: column;
+            max-width: 1100px;
+            margin: auto;
             h2{
                 font-size: 30px;
                 text-align: left;
@@ -593,6 +618,8 @@ body{
         }
         // Info Page
         .information{
+            max-width: 1100px;
+            margin: auto;
             display: flex;
             flex-direction: column;
             h2{
@@ -674,6 +701,8 @@ body{
         }
         // Visa Apply page
         .application{
+            max-width: 1100px;
+            margin: auto;
             display: flex;
             flex-direction: column;
             h2{
@@ -800,6 +829,8 @@ body{
             display: flex;
             justify-content: space-between;
             height: 100px;
+            max-width: 1100px;
+            margin: 0 auto;
             p{
                 color: $darker_font;
                 font-size: 14px;
@@ -821,6 +852,8 @@ body{
             }
         }
         .content{
+            max-width: 1100px;
+            margin: auto;
             padding: 1em;
             font-size: .8em;                
             p{
