@@ -363,6 +363,42 @@ body {
         .container main .note .paragraph p {
           font-size: .8em;
           text-align: center; }
+    .container main .find_visa {
+      display: flex;
+      flex-direction: column;
+      height: 500px; }
+      .container main .find_visa h2 {
+        font-size: 36px;
+        text-align: left;
+        padding: 20px 0;
+        color: #454545;
+        font-weight: 500;
+        border: 1px dotted #454545; }
+      .container main .find_visa h3 {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 20px;
+        color: #000000;
+        font-weight: 400; }
+      .container main .find_visa p {
+        margin: 10px auto;
+        font-size: 14px; }
+      .container main .find_visa form {
+        margin: 10px auto; }
+        .container main .find_visa form .type {
+          padding: .5em 1em; }
+        .container main .find_visa form .button {
+          margin: 30px auto; }
+          .container main .find_visa form .button .btn {
+            text-decoration: none;
+            padding: 1em;
+            background-color: transparent;
+            border: 1px solid #000;
+            margin: 0 auto;
+            width: 180px;
+            display: block;
+            text-align: center;
+            color: #454545; }
   .container footer {
     background-color: #454545; }
     .container footer nav {

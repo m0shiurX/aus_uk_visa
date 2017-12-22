@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,7 +74,41 @@
             </div>
         </header>
         <main>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint tempore excepturi vero illum debitis voluptatibus magni nihil architecto sunt. Odit natus dignissimos modi nihil vel sed quo quos veritatis eius.</p>
+            <div class="find_visa">
+                <h2>Find you Visa</h2>
+                <h3>Find your visa status</h3>
+                <p>Please complete the following details to view your visa entitlements. Fields marked * must be completed.</p>
+                <form action="" method="post">
+                    <div class="type">
+                        <label for="type">Reference type</label>
+                        <select name="type" id="type">
+                            <option value="0">Transection Number</option>
+                            <option value="1">Evedance Number</option>
+                            <option value="2">Last Name</option>
+                        </select>
+                    </div>
+                    <div class="type">
+                        <label for="dob">Date of Birth </label>
+                        <input type="date" name="dob" id="dob">
+                    </div>
+                    <div class="type">
+                        <label for="passport">Date of Birth </label>
+                        <input type="text" name="passport" id="passport">
+                    </div>
+                    <div class="type">
+                        <label for="type">Country of Passport</label>
+                        <select name="country" id="country">
+                            <option value="0">Transection Number</option>
+                            <option value="1">Evedance Number</option>
+                            <option value="2">Last Name</option>
+                        </select>
+                    </div>
+
+                    <div class="button">
+                        <input class="btn" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
         </main>
         <footer>
             <nav>
@@ -108,5 +141,4 @@
         </footer>
     </div>
 </body>
-
 </html>

@@ -479,7 +479,51 @@ body{
                 }
             }
         }
-
+        // Find visa application status
+        .find_visa{
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            h2{
+                font-size: 36px;
+                text-align: left;
+                padding: 20px 0;
+                color: $darker;
+                font-weight: 500;
+                border: 1px dotted $darker;
+            }
+            h3{
+                font-size: 30px;
+                text-align: center;
+                padding-top: 20px;
+                color: $dark;
+                font-weight: 400;
+            }
+            p{
+                margin: 10px auto;
+                font-size: 14px;
+            }
+            form{
+                margin: 10px auto;
+                .type{
+                    padding: .5em 1em;
+                }
+                .button{
+                    margin: 30px auto;
+                    .btn{
+                    text-decoration: none;
+                    padding: 1em;
+                    background-color: transparent;
+                    border: 1px solid #000;
+                    margin: 0 auto;
+                    width: 180px;
+                    display: block;
+                    text-align: center;
+                    color: $darker;
+                }
+                }
+            }
+        }
     }
     footer{
         background-color: $darker;
