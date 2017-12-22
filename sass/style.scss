@@ -542,6 +542,132 @@ body{
                 }
             }
         }
+        // FAQ page
+        .faq{
+            display: flex;
+            flex-direction: column;
+            h2{
+                font-size: 30px;
+                text-align: left;
+                padding: 10px 0;
+                color: $darker;
+                font-weight: 500;
+                border-top: 1px dotted $darker;
+                border-bottom: 1px dotted $darker;
+            }
+            .qasection{
+                padding: 100px 0;
+                table{
+                    tr{
+                        td{
+                            border-top: 1px dotted $darker;
+                            border-left: 1px dotted $darker;
+                            padding: 20px;
+                            text-align: justify;
+                            font-size: 12px;
+                            &.head{
+                                font-weight: 700;
+                                font-size: 16px;
+                                width: 100px;
+                                text-align: center;
+                            }
+                            &:last-child{
+                                border-right: 1px dotted $darker;
+                            }
+                        }
+                        &:nth-child(even){
+                            background-color: #f1efe9;
+                        }
+                        &:last-child{
+                            td{
+                                border-bottom: 1px dotted $darker;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // Info Page
+        .information{
+            display: flex;
+            flex-direction: column;
+            h2{
+                font-size: 30px;
+                text-align: left;
+                padding: 10px 0;
+                color: $darker;
+                font-weight: 500;
+                border-top: 1px dotted $darker;
+                border-bottom: 1px dotted $darker;
+            }
+            .content{
+                padding: 60px 0;
+                .section{
+                    margin: 10px auto;
+                    .sectionhead{
+                        padding: 10px 20px;
+                        line-height: 30px;
+                        background-color: $darker;
+                        h3{
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: $light;
+                        }
+                    }
+                    .sectionbody{
+                        margin: 5px auto 50px auto;
+                        padding: 20px 30px;
+                        border: 1px dotted #454545;
+                        text-align: justify;
+                        font-size: 14px;
+                        zoom: 1;
+                        ul{
+                            li{
+                                line-height: 22px;
+                                list-style-type: none;
+                                padding: .3em 0;
+                                margin-left: 25px;
+                                &:before{
+                                    content: "- ";
+                                    margin-left: -15px;
+                                }
+                            }
+                        }
+                        table{
+                            width: 1040px;
+                            margin: 10px auto;
+                            tr{
+                                font-size: 12px;
+                                font-style: normal;
+                                th{
+                                    text-align: center;
+                                    border: 1px solid #D5D5D5;
+                                    padding: 10px;
+                                    font-weight: normal;
+                                    background-color: #EAEAEA;
+                                }
+                                td{
+                                    text-align: center;
+                                    border-top: 1px solid #D5D5D5;
+                                    border-bottom: 1px solid #D5D5D5;
+                                    padding: 10px;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                        .example{
+                            display: flex;
+                            .paragraph{
+                                padding: 0 1em;
+                                p:last-child{
+                                    margin: 10px auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     footer{
         background-color: $darker;
