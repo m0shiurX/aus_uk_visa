@@ -87,6 +87,9 @@ body {
             .container header .top_head nav ul li a:hover {
               color: #ebc854;
               border-bottom: 1px dashed #ebc854; }
+            .container header .top_head nav ul li a.active {
+              color: #ebc854;
+              border-bottom: 1px dashed #ebc854; }
   .container main {
     margin-top: 80px; }
     .container main .apply {
@@ -506,6 +509,101 @@ body {
                 padding: 0 1em; }
                 .container main .information .content .section .sectionbody .example .paragraph p:last-child {
                   margin: 10px auto; }
+    .container main .application {
+      display: flex;
+      flex-direction: column; }
+      .container main .application h2 {
+        font-size: 30px;
+        text-align: left;
+        padding: 10px 0;
+        color: #454545;
+        font-weight: 500;
+        border-top: 1px dotted #454545;
+        border-bottom: 1px dotted #454545; }
+      .container main .application .content {
+        padding: 20px 0; }
+        .container main .application .content .steps {
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: space-around; }
+          .container main .application .content .steps .step {
+            background-color: #fcfcfc;
+            width: 250px; }
+            .container main .application .content .steps .step .top {
+              border-top: 2px solid #ebc854;
+              border-left: 20px solid #ebc854;
+              height: 10px;
+              width: 150px;
+              padding-bottom: 10px; }
+            .container main .application .content .steps .step .name {
+              font-size: 12px;
+              padding: .5em 1em;
+              text-align: left;
+              color: #1c1c1c; }
+            .container main .application .content .steps .step .stepname {
+              padding: .5em 1em;
+              font-size: 18px;
+              text-align: left;
+              color: #1c1c1c; }
+            .container main .application .content .steps .step .bottom {
+              border-bottom: 2px solid #ebc854;
+              border-right: 2px solid #ebc854;
+              height: 15px;
+              padding-top: 10px;
+              width: 130px;
+              float: right; }
+          .container main .application .content .steps .step:nth-child(2) .top {
+            border-top: 2px solid #454545;
+            border-left: 20px solid #454545; }
+          .container main .application .content .steps .step:nth-child(2) .bottom {
+            border-bottom: 2px solid #454545;
+            border-right: 2px solid #454545; }
+          .container main .application .content .steps .step:nth-child(3) .top {
+            border-top: 2px solid #454545;
+            border-left: 20px solid #454545; }
+          .container main .application .content .steps .step:nth-child(3) .bottom {
+            border-bottom: 2px solid #454545;
+            border-right: 2px solid #454545; }
+        .container main .application .content .note {
+          font-weight: 700;
+          font-size: 14px; }
+        .container main .application .content .section {
+          margin: 10px auto;
+          display: flex;
+          flex-direction: column; }
+          .container main .application .content .section .content {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px dotted #454545;
+            padding: 1em;
+            font-size: 12px;
+            line-height: 18px; }
+            .container main .application .content .section .content strong {
+              padding: 10px 0; }
+          .container main .application .content .section .agree {
+            zoom: 1;
+            padding: 10px 20px;
+            width: 100%;
+            line-height: 30px;
+            font-size: 14px;
+            background-color: #454545;
+            color: #FFF;
+            display: flex;
+            justify-content: space-between; }
+        .container main .application .content .button {
+          display: flex;
+          padding: 50px 20px 50px 0; }
+          .container main .application .content .button .btn {
+            cursor: pointer;
+            text-decoration: none;
+            padding: 1em;
+            background-color: #454545;
+            margin: auto;
+            width: 280px;
+            display: block;
+            text-align: center;
+            color: #FFF;
+            border: none; }
   .container footer {
     background-color: #454545; }
     .container footer nav {

@@ -4,7 +4,7 @@ $darker: #454545;
 $dark: #000000;
 
 $lightest: #FFF;
-$lighter: #FFFFFF;
+$lighter: #fcfcfc;
 $light: #FFF;
 
 $yellow: #ebc854;
@@ -118,6 +118,10 @@ body{
                             color: $darker;
                             text-decoration: none;
                             &:hover{
+                                color: $yellow;
+                                border-bottom: 1px dashed $yellow;
+                            }
+                            &.active{
                                 color: $yellow;
                                 border-bottom: 1px dashed $yellow;
                             }
@@ -479,7 +483,7 @@ body{
                 }
             }
         }
-        // Find visa application status
+        // Find visa application status page
         .find_visa{
             display: flex;
             flex-direction: column;
@@ -664,6 +668,126 @@ body{
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+        // Visa Apply page
+        .application{
+            display: flex;
+            flex-direction: column;
+            h2{
+                font-size: 30px;
+                text-align: left;
+                padding: 10px 0;
+                color: $darker;
+                font-weight: 500;
+                border-top: 1px dotted $darker;
+                border-bottom: 1px dotted $darker;
+            }
+            .content{
+                padding: 20px 0;
+                .steps{
+                    margin-bottom: 20px; 
+                    display: flex;
+                    justify-content: space-around;
+                    .step{
+                        background-color: $lighter;
+                        width: 250px;
+                        .top{
+                            border-top: 2px solid $yellow;
+                            border-left: 20px solid $yellow;
+                            height: 10px;
+                            width: 150px;
+                            padding-bottom: 10px;
+                        }
+                        .name{
+                            font-size: 12px;
+                            padding: .5em 1em;
+                            text-align: left;
+                            color: #1c1c1c;
+                        }
+                        .stepname{
+                            padding: .5em 1em;
+                            font-size: 18px;
+                            text-align: left;
+                            color: #1c1c1c;
+                        }
+                        .bottom{
+                            border-bottom: 2px solid $yellow;
+                            border-right: 2px solid $yellow;
+                            height: 15px;
+                            padding-top:10px;
+                            width: 130px;
+                            float: right;
+                        }
+                    }
+                    .step:nth-child(2){
+                        .top{
+                            border-top: 2px solid $darker;
+                            border-left: 20px solid $darker;
+                        }
+                        .bottom{
+                            border-bottom: 2px solid $darker;
+                            border-right: 2px solid $darker;
+                        }
+                    }
+                    .step:nth-child(3){
+                        .top{
+                            border-top: 2px solid $darker;
+                            border-left: 20px solid $darker;
+                        }
+                        .bottom{
+                            border-bottom: 2px solid $darker;
+                            border-right: 2px solid $darker;
+                        }
+                    }
+                }
+                .note{
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+                .section{
+                    margin: 10px auto;
+                    display: flex;
+                    flex-direction: column;
+                    .content{
+                        max-height: 200px;
+                        overflow-y: auto;
+                        border: 1px dotted $darker;
+                        padding: 1em;
+                        font-size: 12px;
+                        line-height: 18px;
+                        strong{
+                            padding: 10px 0;
+                        }
+                    }
+                    .agree{
+                        zoom: 1;
+                        padding: 10px 20px;
+                        width: 100%;
+                        line-height: 30px;
+                        font-size: 14px;
+                        background-color: #454545;
+                        color: $light;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+                .button{
+                    display: flex;
+                    padding: 50px 20px 50px 0;
+                    .btn{
+                        cursor: pointer;
+                        text-decoration: none;
+                        padding: 1em;
+                        background-color: $darker;
+                        margin: auto;
+                        width: 280px;
+                        display: block;
+                        text-align: center;
+                        color: $light;
+                        border: none;
                     }
                 }
             }
