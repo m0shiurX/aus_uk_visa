@@ -84,11 +84,12 @@
                 <p>Please complete the following details to view your visa entitlements. Fields marked * must be completed.</p>
                 <form action="" method="post">
                     <div class="type">
-                        <label for="type">Reference type</label>
-                        <select name="type" id="type">
-                            <option value="0">Transection Number</option>
-                            <option value="1">Evedance Number</option>
-                            <option value="2">Last Name</option>
+                        <label for="type">Status type</label>
+                        <select name="type" id="type" required>
+                            <option value="">Please choose a status type</option>
+                            <option value="0">Application Status</option>
+                            <option value="1">Visa Status</option>
+                            <option value="2">Visa Grant Notice Status</option>
                         </select>
                     </div>
                     <div class="type">
