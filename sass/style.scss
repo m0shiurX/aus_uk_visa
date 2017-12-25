@@ -15,12 +15,27 @@ $darkest_font: #000;
 $darker_font: #a0a09e;
 $dark_font: #fbfbfb;
 
+$darkerbg : #f1efe9;
 $border : #727272;
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+@media screen and (max-width:700px) {
+    .top_head{
+        .looser{
+            justify-content: center;
+            .logo{
+                width: 90%;
+                margin: 0 auto;
+            }
+            .navigation{
+                display: none !important;
+            }
+        }
+    }
 }
 
 body{
@@ -62,8 +77,13 @@ body{
                 justify-content: space-between;
                 .logo{
                     margin-left: 1em;
-                    padding: 1em .5em;
-                    border: 1px dashed $border;
+                    img{
+                        padding: 1em .5em;
+                        border: 1px dashed $border;
+                        width:100%;
+                        min-width: 280px;
+                        height: auto;
+                    }
                 }
                 .navigation{
                     display: flex;
@@ -104,10 +124,11 @@ body{
                     }
                 }
                 nav{
-                    height: 70px;
+                    min-height: 70px;
                     position: absolute;
-                    bottom: -40px;
-                    width: 1100px;
+                    top: 120px;
+                    max-width: 1100px;
+                    width: 100%;
                     background-color: $light; 
                     ul{
                         text-align: center;
@@ -323,7 +344,7 @@ body{
                                 }
                             }
                             &:nth-child(even){
-                                background-color: #f1efe9;
+                                background-color: $darkerbg;
                             }
                             &:last-child{
                                 td{
@@ -490,7 +511,7 @@ body{
                 }
             }
         }
-        .note{
+        .notes{
             padding: 0 0 50px 0;
             .paragraph{
                 padding: 1em;
@@ -606,7 +627,7 @@ body{
                             }
                         }
                         &:nth-child(even){
-                            background-color: #f1efe9;
+                            background-color: $darkerbg;
                         }
                         &:last-child{
                             td{
@@ -722,14 +743,18 @@ body{
                     display: flex;
                     justify-content: space-around;
                     .step{
-                        background-color: $lighter;
-                        width: 250px;
+                        background-color: $darkerbg;
+                        width: 25%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
                         .top{
-                            border-top: 2px solid $yellow;
-                            border-left: 20px solid $yellow;
+                            border-top: 2px solid $darker;
+                            border-left: 20px solid $darker;
                             height: 10px;
-                            width: 150px;
-                            padding-bottom: 10px;
+                            width: 70%;
+                            padding-bottom: 1em;
+                            align-self: flex-start;
                         }
                         .name{
                             font-size: 12px;
@@ -744,64 +769,124 @@ body{
                             color: #1c1c1c;
                         }
                         .bottom{
-                            border-bottom: 2px solid $yellow;
-                            border-right: 2px solid $yellow;
+                            border-bottom: 2px solid $darker;
+                            border-right: 2px solid $darker;
                             height: 15px;
                             padding-top:10px;
-                            width: 130px;
-                            float: right;
+                            width: 60%;
+                            align-self: flex-end;
                         }
                     }
-                    .step:nth-child(2){
+                    .step.active{
                         .top{
-                            border-top: 2px solid $darker;
-                            border-left: 20px solid $darker;
+                            border-top: 2px solid $yellow;
+                            border-left: 20px solid $yellow;
                         }
                         .bottom{
-                            border-bottom: 2px solid $darker;
-                            border-right: 2px solid $darker;
+                            border-bottom: 2px solid $yellow;
+                            border-right: 2px solid $yellow;
                         }
                     }
-                    .step:nth-child(3){
+                    .step.activated{
                         .top{
-                            border-top: 2px solid $darker;
-                            border-left: 20px solid $darker;
+                            border-top: 2px solid $dark;
+                            border-left: 20px solid $dark;
                         }
                         .bottom{
-                            border-bottom: 2px solid $darker;
-                            border-right: 2px solid $darker;
+                            border-bottom: 2px solid $dark;
+                            border-right: 2px solid $dark;
                         }
                     }
                 }
-                .note{
-                    font-weight: 700;
-                    font-size: 14px;
+
+                fieldset { 
+                    display: none; 
+                    text-align: left;
+                    border: none;
+                    .input-error { 
+                        border-color: red; 
+                    }
+                    iframe{
+                        width: 100%;
+                        height: 200px;
+                        overflow-y: scroll;
+                        border: 1px solid #ccc;
+                    }
+                    .btn-previous{
+                        background-color: lightgrey;
+                    }
+                    .btn-next{
+                        background-color: green;
+                        color: white;
+                    }
+                    .note{
+                        font-weight: 700;
+                        font-size: 14px;
+                        margin: 20px 0;
+                        .alert{
+                            color: red;
+                        }
+                    }
                 }
+
                 .section{
                     margin: 10px auto;
                     display: flex;
                     flex-direction: column;
                     .content{
-                        max-height: 200px;
-                        overflow-y: auto;
                         border: 1px dotted $darker;
                         padding: 1em;
                         font-size: 12px;
                         line-height: 18px;
-                        strong{
-                            padding: 10px 0;
+                        .fg{
+                            font-size: 14px;;
+                            padding: 0.5em 0;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            text-align: left;
+                            label, p{
+                                width: 40%;
+                                font-weight: 600;
+                                font-size: 14px;
+                                i{
+                                    font-weight: 100;
+                                    font-size: .9em;
+                                }
+                            }
+                            span{
+                                width: 100%;
+                                input{
+                                    width: auto;
+                                    &[type="tel"]{
+                                        width: 100%;
+                                    }
+                                    &.input-error { 
+                                        border-color: red; 
+                                    }
+                                }
+                            }
+                            input,select{
+                                padding: .6em 1em;
+                                width: 100%;
+                                border: 1px solid $dark;
+                                background: $darkerbg;
+                                &.input-error { 
+                                    border-color: red; 
+                                }
+                            }
                         }
                     }
                     .agree{
                         zoom: 1;
                         padding: 10px 20px;
                         width: 100%;
-                        line-height: 30px;
-                        font-size: 14px;
                         background-color: #454545;
-                        color: $light;
                         display: flex;
                         justify-content: space-between;
+                        color: $light;
+                        line-height: 30px;
+                        font-size: 14px;
                     }
                 }
                 .button{
