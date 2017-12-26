@@ -38,6 +38,20 @@
 			}
 			return false;
 		}
+		public function findVisa($passport_number, $trackingNumber, $dob, $country){
+			$request = $this->dbh->prepare("SELECT * FROM tbl_application WHERE PassportNumber= ? AND TrackingNumber= ? AND DateOfBirth= ? AND Country = ? LIMIT 1");
+			if ($request->execute([$passport_number, $trackingNumber, $dob, $country])) {
+				return $request->fetch();
+			}
+			return false;
+		}
+		public function findApplication($app_id){
+			$request = $this->dbh->prepare("select tbl_application.*, tbl_status.*,tbl_country.* from tbl_application inner join tbl_status on tbl_status.AppID=tbl_application.ID inner join tbl_country on tbl_country.ID=tbl_application.WantToGo where tbl_application.ID = ?");
+			if ($request->execute([$app_id])) {
+				return $request->fetch();
+			}
+			return false;
+		}
 
 		public function updateAccount($id, $user_name, $email, $full_name, $address, $contact){
 			$request = $this->dbh->prepare("UPDATE accounts SET username =?, email =?, fullname =?, address= ?, contact =? WHERE user_id =?");

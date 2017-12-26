@@ -453,6 +453,28 @@ body {
               border: 1px solid #000;
               background-color: #FFF;
               color: #454545; }
+    .container main #survey_container {
+      width: 960px;
+      margin: 0 auto;
+      padding: 1em;
+      background: #FFF;
+      box-shadow: 1px 1px 10px -5px #000; }
+      .container main #survey_container #middle-wizard {
+        width: 70%;
+        margin: auto;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 50px 0; }
+      .container main #survey_container .main_table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px; }
+        .container main #survey_container .main_table td {
+          border: 1px solid #000000;
+          padding: .3em 1em; }
+      .container main #survey_container td {
+        width: 230px;
+        padding: 2px 0px; }
     .container main .faq {
       display: flex;
       flex-direction: column;

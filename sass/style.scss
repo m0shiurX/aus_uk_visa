@@ -591,6 +591,34 @@ body{
                 }
             }
         }
+        // Survey Container
+        #survey_container {
+            width: 960px;
+            margin:  0 auto;
+            padding:  1em;
+            background: #FFF;
+            box-shadow: 1px 1px 10px -5px #000;
+            #middle-wizard {
+                width: 70%;
+                margin:  auto;
+                font-size: 14px;
+                line-height: 20px;
+                padding: 50px 0;
+            }
+            .main_table{
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 30px;
+                td{
+                    border: 1px solid $dark;
+                    padding: .3em 1em;
+                }
+            }
+            td {
+                width: 230px;
+                padding: 2px 0px;
+            }
+        }
         // FAQ page
         .faq{
             display: flex;

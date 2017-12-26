@@ -21,10 +21,10 @@ require_once "includes/actions.php";
                 <h2>Find you Visa</h2>
                 <h3>Find your visa status</h3>
                 <p>Please complete the following details to view your visa entitlements. Fields marked * must be completed.</p>
-                <form action="" method="post">
+                <form id="visastatus" action="" method="POST">
                     <div class="type">
                         <label for="type">Reference type</label>
-                        <select name="type" id="type" required>
+                        <select name="reference" id="type" required>
                             <option value="">Please choose a Reference type</option>
                             <option value="1">Application Status</option>
                             <option value="2">Visa Status</option>
@@ -33,7 +33,7 @@ require_once "includes/actions.php";
                     </div>
                     <div class="type">
                         <label for="tracking">Tracking Number</label>
-                        <input type="text" name="tracking" id="tracking">
+                        <input type="text" name="trackingNumber" id="tracking">
                     </div>
                     <div class="type">
                         <label for="dob">Date of Birth </label>
@@ -41,7 +41,7 @@ require_once "includes/actions.php";
                     </div>
                     <div class="type">
                         <label for="passport">Passport Number</label>
-                        <input type="text" name="passport" id="passport">
+                        <input type="text" name="passport_number" id="passport">
                     </div>
                     <div class="type">
                         <label for="type">Country of Passport</label>
@@ -59,12 +59,30 @@ require_once "includes/actions.php";
                     </div>
 
                     <div class="button">
-                        <input class="btn" type="submit" value="Check(Disabled for a while)" >
+                        <input class="btn" type="submit" value="Check" >
                     </div>
                 </form>
             </div>
         </main>
         <?php include "components/footer.php"; ?>
     </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+    jQuery(document).ready(function() {
+        $('form#visastatus').on('submit', function(e) {
+            e.preventDefault();
+            console.log("Submitted");
+            $.ajax({
+                type: 'post',
+                url: 'visa_status.php',
+                data: $('form#visastatus').serialize(),
+                success: function (response) {
+                    $('.find_visa').fadeOut();
+                    $('main').html(response);
+                }
+            });
+        });
+    })
+    </script>
 </body>
 </html>
