@@ -11,73 +11,7 @@
 
 <body>
     <div class="container">
-        <header>
-            <div class="slim_head">
-                <div class="looser">
-                    <p>We will provide services to make your visa easy to use.</p>
-                    <p>Service Language :
-                        <span class="language">ENGLISH</span>
-                    </p>
-                </div>
-            </div>
-            <div class="top_head">
-                <div class="looser">
-                <div class="logo">
-                    <img src="css/img/logoc.png" alt="AUS-UK Visa Process">
-                </div>
-                <div class="navigation">
-                    <div class="singleitem">
-                        <img src="/css/img/muneIcon02.png" alt="" class="icon">
-                        <div class="linkntext">
-                            <a href="#why">Why Choose Us ?</a>
-                            <span>Benifits of Our Site</span>
-                        </div>
-                    </div>
-                    <div class="singleitem">
-                        <img src="/css/img/muneIcon03.png" alt="" class="icon">
-                        <div class="linkntext">
-                            <a href="#contact">Customer Help Center</a>
-                            <span>Please Ask Questions</span>
-                        </div>
-                    </div>
-                    <div class="singleitem">
-                        <img src="/css/img/muneIcon01.png" alt="" class="icon">
-                        <div class="linkntext">
-                            <a href="apply.html">Apply Australia Visa</a>
-                            <span>Easy &amp; Fast Application</span>
-                        </div>
-                    </div>
-                    <div class="singleitem">
-                        <div class="linkntext">
-                            <p class="title">Language :</p>
-                            <select class="selection" name="lang" id="lang">
-                                <option value="en">ENGLISH</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="apply.html">Apply Now</a>
-                        </li>
-                        <li>
-                            <a href="aus_visa_info.html">Australia Visa Info</a>
-                        </li>
-                        <li>
-                            <a href="find_visa.html">Find Your Visa</a>
-                        </li>
-                        <li>
-                            <a class="active" href="faq.html">Frequent Questions</a>
-                        </li>
-                    </ul>
-                </nav>
-                </div>
-            </div>
-        </header>
+    <?php include "components/header.php"; ?>
         <main>
            <div class="faq">
                <h2>FAQs</h2>
@@ -136,35 +70,7 @@
                </div>
            </div>
         </main>
-        <footer>
-            <nav>
-                <p>Our site is using SSL encryption and
-                    <br>taking steps to secure credit card information.</p>
-                <ul>
-					<li><a href="service.html">Our Service</a></li>
-					<li><a href="policy.html">User Policy</a></li>
-					<li><a href="dmca.html">Information Protections</a></li>
-					<li><a href="tos.html">Precautions</a></li>
-					<li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </nav>
-            <div class="content">
-                <p>
-                    auetavisas.org is a private company not affiliated with the Government of Australia. We assist visitors from eligible countries
-                    to apply for a Australia Visa Online with advising our clients through the Australian visa process. If
-                    you wish to apply directly, you may apply through Australian government.
-                </p>
-                <p>
-                    If you wish to submit your application through the Australian Government website for a lower price and reduced assistances
-                    you may apply there. Our application service fee is . It is quoted with Government processing fee of
-                    application and Service charge. The applicants who doesn’t wish to submit through our website, can file
-                    an application through the Australian Government and Border Protection.
-                </p>
-            </div>
-            <div class="slim_footer">
-                <p>Copyright ⓒ 2009. All rights reserved.</p>
-            </div>
-        </footer>
+    <?php include "components/footer.php"; ?>
     </div>
 </body>
 

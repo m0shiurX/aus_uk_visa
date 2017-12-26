@@ -1,3 +1,8 @@
+<?php
+require_once "includes/headx.php";
+require_once "includes/actions.php";
+    $actions = new Actions($dbh);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,73 +16,7 @@
 
 <body>
     <div class="container">
-        <header>
-            <div class="slim_head">
-                <div class="looser">
-                <p>We will provide services to make your visa easy to use.</p>
-                <p>Service Language :
-                    <span class="language">ENGLISH</span>
-                </p>
-                </div>
-            </div>
-            <div class="top_head">
-                <div class="looser">
-                <div class="logo">
-                    <img src="css/img/logoc.png" alt="AUS-UK Visa Process">
-                </div>
-                <div class="navigation">
-                    <div class="singleitem">
-                        <img src="css/img/muneIcon02.png" alt="" class="icon">
-                        <div class="linkntext">
-                            <a href="#why">Why Choose Us ?</a>
-                            <span>Benifits of Our Site</span>
-                        </div>
-                    </div>
-                    <div class="singleitem">
-                        <img src="css/img/muneIcon03.png" alt="" class="icon">
-                        <div class="linkntext">
-                            <a href="#contact">Customer Help Center</a>
-                            <span>Please Ask Questions</span>
-                        </div>
-                    </div>
-                    <div class="singleitem">
-                        <img src="css/img/muneIcon01.png" alt="" class="icon">
-                        <div class="linkntext">
-                            <a href="apply.html">Apply Australia Visa</a>
-                            <span>Easy &amp; Fast Application</span>
-                        </div>
-                    </div>
-                    <div class="singleitem">
-                        <div class="linkntext">
-                            <p class="title">Language :</p>
-                            <select class="selection" name="lang" id="lang">
-                                <option value="en">ENGLISH</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a class="active" href="apply.html">Apply Now</a>
-                        </li>
-                        <li>
-                            <a href="aus_visa_info.html">Australia Visa Info</a>
-                        </li>
-                        <li>
-                            <a href="find_visa.html">Find Your Visa</a>
-                        </li>
-                        <li>
-                            <a href="faq.html">Frequent Questions</a>
-                        </li>
-                    </ul>
-                </nav>
-                </div>
-            </div>
-        </header>
+    <?php include "components/header.php"; ?>
         <main>
           <div class="application">
             <h2>Apply Visa</h2>
@@ -162,6 +101,29 @@
                                     </span>
                                 </div>
                                 <div class="fg">
+                                    <label for="c2g">Country to Go</label>
+                                    <select name="c2g" id="c2g" >
+                                        <option value="">Select</option>
+                                        <?php
+                                            $countries = $actions->fetchCountries();
+                                            if (isset($countries) && sizeof($countries) > 0){
+                                                foreach ($countries as $country) { ?>
+                                                <option value="<?=$country->ID?>"><?=$country->CountryName?></option>
+                                            <?php }
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="fg">
+                                    <p> Processing Type</p>
+                                    <span>
+                                        <input type="radio" name="processing" id="std" class="field" value="standard" checked/>
+                                        <label for="std">Standard </label>
+                                        <input type="radio" name="processing" id="emmer" class="field" value="Emergency"/>
+                                        <label for="emer">Emergency</label>
+                                    </span>
+                                </div>
+                                <div class="fg">
                                    <label for="familyname"> Family name <i>(English-Only, Same as Passport)</i></label>
                                    <input type="text" name="familyname" id="familyname" >
                                 </div>
@@ -177,7 +139,14 @@
                                     <label for="pob">Place of Birth</label>
                                     <select name="pob" id="pob" >
                                         <option value="">Select</option>
-                                        <option value="BD"> Bangladesh</option>
+                                        <?php
+                                            $countries = $actions->fetchCountries();
+                                            if (isset($countries) && sizeof($countries) > 0){
+                                                foreach ($countries as $country) { ?>
+                                                <option value="<?=$country->ID?>"><?=$country->CountryName?></option>
+                                            <?php }
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="fg">
@@ -200,14 +169,28 @@
                                     <label for="nationality">Nationality</label>
                                     <select name="nationality" id="nationality">
                                         <option value="">Select</option>
-                                        <option value="BD"> Bangladesh</option>
+                                        <?php
+                                            $countries = $actions->fetchCountries();
+                                            if (isset($countries) && sizeof($countries) > 0){
+                                                foreach ($countries as $country) { ?>
+                                                <option value="<?=$country->ID?>"><?=$country->CountryName?></option>
+                                            <?php }
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="fg">
                                     <label for="countryofpassport">Country of Passport</label>
                                     <select name="countryofpassport" id="countryofpassport" >
                                         <option value="">Select</option>
-                                        <option value="BD"> Bangladesh</option>
+                                        <?php
+                                            $countries = $actions->fetchCountries();
+                                            if (isset($countries) && sizeof($countries) > 0){
+                                                foreach ($countries as $country) { ?>
+                                                <option value="<?=$country->ID?>"><?=$country->CountryName?></option>
+                                            <?php }
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="fg">
@@ -226,36 +209,30 @@
                                    <label for="issue_auth">Issuing Authority</label>
                                    <input type="text" name="issue_auth" id="issue_auth"  placeholder="Enter the full name of the issuing authority that issued the passport.">
                                 </div>
-                                <div class="fg">
-                                    <p>Citizenship</p>
+                                <!-- <div class="fg">
+                                    <p>Have Other Citizenship ?</p>
                                     <span>
-                                        <input type="radio" name="citizenship" id="yes" class="field" value="yes"/>
-                                        <label for="yes">yes </label>
-                                        <input type="radio" name="citizenship" id="no" class="field" value="no" checked/>
-                                        <label for="no">no</label>
+                                        <input type="checkbox" name="citizenshipstatus" id="trigger" class="field" value="yes"/>
+                                        <label for="trigger">yes </label>
                                     </span>
+                                </div> -->
+                                <div class="fg hidden_fields">
+
                                 </div>
-                                <div class="fg">
-                                    <label for="citizenship1">Citizenship 1</label>
-                                    <select name="citizenship1" id="citizenship1">
-                                        <option value="">Select</option>
-                                        <option value="BD"> Bangladesh</option>
-                                    </select>
-                                </div>
-                                <div class="fg">
+                                <!-- <div class="fg hidden_fields">
                                     <label for="citizenship2">Citizenship 2</label>
                                     <select name="citizenship2" id="citizenship2">
                                         <option value="">Select</option>
-                                        <option value="BD"> Bangladesh</option>
+                                        <option value="1"> Bangladesh</option>
                                     </select>
                                 </div>
-                                <div class="fg">
+                                <div class="fg hidden_fields">
                                     <label for="citizenship3">Citizenship 3</label>
                                     <select name="citizenship3" id="citizenship3">
                                         <option value="">Select</option>
-                                        <option value="BD"> Bangladesh</option>
+                                        <option value="1"> Bangladesh</option>
                                     </select>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="section">
@@ -279,7 +256,14 @@
                                     <label for="country">Country</label>
                                     <select name="country" id="country" >
                                         <option value="">Select</option>
-                                        <option value="BD"> Bangladesh</option>
+                                        <?php
+                                            $countries = $actions->fetchCountries();
+                                            if (isset($countries) && sizeof($countries) > 0){
+                                                foreach ($countries as $country) { ?>
+                                                <option value="<?=$country->ID?>"><?=$country->CountryName?></option>
+                                            <?php }
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="fg">
@@ -289,7 +273,14 @@
                                             <label for="ccode">Country Code</label>
                                             <select name="ccode" id="ccode" >
                                                 <option value="">Select</option>
-                                                <option value="BD"> Bangladesh</option>
+                                                <?php
+                                                    $countries = $actions->fetchCountries();
+                                                    if (isset($countries) && sizeof($countries) > 0){
+                                                        foreach ($countries as $country) { ?>
+                                                        <option value="<?=$country->ID?>"><?=$country->CountryName?></option>
+                                                    <?php }
+                                                    }
+                                                ?>
                                             </select>
                                         </div>
                                         <div class="fg">
@@ -319,7 +310,7 @@
                         </div>
                     </fieldset>
                     <fieldset>
-                        <div class="jumbotron text-center">
+                        <div class="jumbotron">
                             <h1>Please Check you data again and submit button to push your data</h1>
                         </div>
                         <div class="button">
@@ -331,35 +322,7 @@
             </div>
           </div>
         </main>
-        <footer>
-            <nav>
-                <p>Our site is using SSL encryption and
-                    <br>taking steps to secure credit card information.</p>
-                <ul>
-					<li><a href="service.html">Our Service</a></li>
-					<li><a href="policy.html">User Policy</a></li>
-					<li><a href="dmca.html">Information Protections</a></li>
-					<li><a href="tos.html">Precautions</a></li>
-					<li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </nav>
-            <div class="content">
-                <p>
-                    auetavisas.org is a private company not affiliated with the Government of Australia. We assist visitors from eligible countries
-                    to apply for a Australia Visa Online with advising our clients through the Australian visa process. If
-                    you wish to apply directly, you may apply through Australian government.
-                </p>
-                <p>
-                    If you wish to submit your application through the Australian Government website for a lower price and reduced assistances
-                    you may apply there. Our application service fee is . It is quoted with Government processing fee of
-                    application and Service charge. The applicants who doesn’t wish to submit through our website, can file
-                    an application through the Australian Government and Border Protection.
-                </p>
-            </div>
-            <div class="slim_footer">
-                <p>Copyright ⓒ 2009. All rights reserved.</p>
-            </div>
-        </footer>
+    <?php include "components/footer.php"; ?>
     </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/script.js"></script>

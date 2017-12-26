@@ -827,6 +827,19 @@ body{
                             color: red;
                         }
                     }
+                    .jumbotron{
+                        color: green;
+                        font-size: 22px;
+                        height: 400px;
+                        text-align: center;
+                        display: flex;
+                        h1{
+                            margin: auto;
+                            i{
+                                color: tomato;
+                            }
+                        }
+                    }
                 }
 
                 .section{

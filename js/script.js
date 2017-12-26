@@ -59,28 +59,38 @@ jQuery(document).ready(function() {
     	});
     });
     
-    // $('form').on('submit', function(e) {
-    // 	$(this).find('input[type="text"], input[type="password"], input[type="username"], input[type="email"], input[type="tel"], input[type="url"], textarea').each(function() {
-    // 		if( $(this).val() == "" ) {
-    // 			e.preventDefault();
-    // 			$(this).addClass('input-error');
-    // 		}
-    // 		else {
-    // 			$(this).removeClass('input-error');
-    // 		}
-    // 	});
-    // });
     $('form').on('submit', function(e) {
 		e.preventDefault();
 		$.ajax({
 			type: 'post',
 			url: 'save.php',
 			data: $('form').serialize(),
-			success: function (data) {
-				console.log(data);
-				alert(data);
+			success: function (response) {
+				$('.jumbotron h1').html(response);
+				$('.button').fadeOut();
+				$('.steps').fadeOut();
 			}
 		});
-    });
+	});
+
+	// Get the form fields and hidden div
+	var checkbox = $("#trigger");
+	var hidden = $(".hidden_fields");
+	//hidden.hide();
+
+	checkbox.change(function () {
+		if (checkbox.is(':checked')) {
+			hidden.html(`
+						<label for="citizenship">Select Citizenship</label>
+						<select name="citizenship" id="citizenship1">
+							<option value="">Select</option>
+							<option value="1"> Bangladesh</option>
+						</select>
+			`);
+		} else {
+			hidden.html('');
+			//$(".hidden_fields").val("");
+		}
+	});
     
 });
