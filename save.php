@@ -41,5 +41,35 @@ require_once "includes/actions.php";
             echo "Error Submisstion, Check your data and try again !";
         }else {
             echo "Succesfully applied ! your trackig number is <i> $trackingNumber </i> .";
+            	/* mail sending option start */
+				$mcontent = "<h4> Australia UK Visa Process Center</h4>";
+				$mcontent .= "<p> Here is your login information for checking application status</p>";
+				$mcontent .= "<p> Passport Number:  '".$passport_number."' </p>";
+				$mcontent .= "<p> Tracking Number:  '".$TrackingNumber."' </p>";
+				$mcontent .= "<p> Please click following link for checking application status. </p>";
+				$mcontent .= "<p> Status Checking Url: <a href='http://aus-ukvisaprocess.com/find_visa.php' target='_blank'>Check Status</a> </p>";
+				$mcontent .= "<h4><br/><br/> Thank You. <br/> Visa Processing Team</h4>";
+				require 'PHPMailer/PHPMailerAutoload.php';
+				$mail = new PHPMailer;
+				$mail->isMail();
+				//$mail->isSMTP();
+				//$mail->Host = 'smtp.gmail.com';
+				//$mail->SMTPAuth = true;
+				$mail->Username = 'primesiliconproject@gmail.com';
+				$mail->Password = 'primesiliconbangladesh';
+				$mail->SMTPSecure = 'tls';
+				$mail->From = 'shatabdiit@gmail.com';
+				$mail->FromName = 'Australia UK Visa Process';
+				$mail->addAddress($_POST['Email'],$_POST['FirstName']);
+				//$mail->addAddress('shatabdi.iceiu@gmail.com','Al-Amar Labanese Cuisine Bangladesh');
+				//$mail->addAddress($email, $rowusermail['user_full_name']);
+				$mail->addReplyTo('shatabdiit@gmail.com','Australia UK Visa Process');
+				//$mail->addReplyTo($email, $name);
+				$mail->WordWrap = 100;
+				$mail->isHTML(true);
+				$mail->Subject = 'Australia UK Visa Process Tracking Number';
+				$mail->Body    = $mcontent;
+				$mail->send();
+				/* mail sending option end */
         }
     }
