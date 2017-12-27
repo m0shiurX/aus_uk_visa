@@ -283,14 +283,14 @@ require_once "includes/actions.php";
                     ?>
                         <div id="survey_container" class="wizard" novalidate="novalidate">
                             <div id="middle-wizard" class="wizard-branch wizard-wrapper">
-                                <h1>Your application is not yet 100% Complete.</h1>
+                                <h1>Your visa is not yet Granted.</h1>
                             </div>
                         </div>
                     <?php
                 }else{
                     ?>
                     <div id="survey_container" class="wizard" novalidate="novalidate">
-                        <div id="middle-wizard" class="wizard-branch wizard-wrapper">
+                        <div id="middle-wizard" style="position:relative" class="wizard-branch wizard-wrapper">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div style="text-align:center;"><img src="assets/<?=$appDetails->LogoName?>"></div>
@@ -301,6 +301,9 @@ require_once "includes/actions.php";
                             </div>
                             <!-- end row -->
                             <div class="submit step wizard-step current" id="complete" style="display: block;">
+                            <div class="qrcode" style="position:  absolute;right: 0;top: 200px;width: 150px;height: 150px;">
+                                <img style="width: 100%;height: auto;" src="assets/qr.jpg" alt="">
+                            </div>
                                 <!-- start sumit step -->
                                 <table>
                                     <tbody>
@@ -351,7 +354,7 @@ require_once "includes/actions.php";
                                         </tr>
                                         <tr>
                                             <td>Client ID:</td>
-                                            <td></td>
+                                            <td><?=$appDetails->OrderID?></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -362,11 +365,11 @@ require_once "includes/actions.php";
                                         </tr>
                                         <tr>
                                             <td width="200">Visa Class</td>
-                                            <td></td>
+                                            <td><?=$appDetails->v_class?></td>
                                         </tr>
                                         <tr>
                                             <td>Visa Subclass</td>
-                                            <td></td>
+                                            <td><?=$appDetails->v_subClass?></td>
                                         </tr>
                                         <tr>
                                             <td>Visa Grant Number</td>
@@ -378,20 +381,20 @@ require_once "includes/actions.php";
                                         </tr>
                                         <tr>
                                             <td>Travel Document Number</td>
-                                            <td></td>
+                                            <td><?=$appDetails->t_doc?></td>
                                         </tr>
                                         <tr>
                                             <td>Travel Document Country</td>
-                                            <td></td>
+                                            <td><?=$appDetails->t_country?></td>
                                         </tr>
                                         <tr>
                                             <td>Must Make First Entry to
                                                 <br> Australia Before</td>
-                                            <td></td>
+                                            <td><?=date('d F Y', strtotime($appDetails->DecisionDate))?></td>
                                         </tr>
                                         <tr>
                                             <td>Must Not Arrive After</td>
-                                            <td></td>
+                                            <td><?=date('d F Y', strtotime($appDetails->ArrivalDate))?></td>
                                         </tr>
                                         <tr>
                                             <td>Stay Period</td>
@@ -399,17 +402,17 @@ require_once "includes/actions.php";
                                         </tr>
                                         <tr>
                                             <td>Travel Facility</td>
-                                            <td></td>
+                                            <td><?=$appDetails->t_facility?></td>
                                         </tr>
                                         <tr>
                                             <td>Visa Conditions</td>
-                                            <td></td>
+                                            <td><?=$appDetails->v_condiitons?></td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div style="text-align:left; color:#000;">
                                     <b>First Entry Date</b>
-                                    <br> You must make your first entry to Australia before 03 May 2017. It is not possible to change this date
+                                    <br> You must make your first entry to Australia before <?=date('d F Y', strtotime($appDetails->DecisionDate))?> . It is not possible to change this date
                                     <br>
                                     <br>
                                     <b>AUEP Address</b>
