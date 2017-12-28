@@ -16,6 +16,7 @@ require_once "includes/actions.php";
 <body>
     <div class="container">
         <?php include "components/header.php"; ?>
+                <!-- <button id="cmd">generate PDF</button> -->
         <main>
             <div class="find_visa">
                 <h2>Find you Visa</h2>
@@ -63,10 +64,12 @@ require_once "includes/actions.php";
                     </div>
                 </form>
             </div>
+
         </main>
         <?php include "components/footer.php"; ?>
     </div>
     <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jspdf.min.js"></script> -->
     <script>
     jQuery(document).ready(function() {
         $('form#visastatus').on('submit', function(e) {
@@ -83,6 +86,21 @@ require_once "includes/actions.php";
             });
         });
     })
+        // var doc = new jsPDF();
+        // var specialElementHandlers = {
+        //     '#survey_container': function (element, renderer) {
+        //         return true;
+        //     }
+        // };
+
+        // $('#cmd').click(function () {
+        //     console.log("clicked");
+        //     doc.fromHTML($('#survey_container').html(), 15, 15, {
+        //         'width': 800,
+        //             'elementHandlers': specialElementHandlers
+        //     });
+        //     doc.save('sample-file.pdf');
+        // });
     </script>
 </body>
 </html>

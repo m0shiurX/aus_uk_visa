@@ -28,6 +28,8 @@ bower_components
 
 #backup files
 backup/
+PHPMailer/
+ausuk/
 
 # node-waf configuration
 .lock-wscript

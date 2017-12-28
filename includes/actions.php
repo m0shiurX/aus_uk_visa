@@ -52,6 +52,13 @@
 			}
 			return false;
 		}
+		public function getCountryName($id){
+			$request = $this->dbh->prepare("SELECT * FROM tbl_country  where ID = ?");
+			if ($request->execute([$id])) {
+				return $request->fetch();
+			}
+			return false;
+		}
 
 		public function updateAccount($id, $user_name, $email, $full_name, $address, $contact){
 			$request = $this->dbh->prepare("UPDATE accounts SET username =?, email =?, fullname =?, address= ?, contact =? WHERE user_id =?");

@@ -217,22 +217,7 @@ require_once "includes/actions.php";
                                     </span>
                                 </div> -->
                                 <div class="fg hidden_fields">
-
                                 </div>
-                                <!-- <div class="fg hidden_fields">
-                                    <label for="citizenship2">Citizenship 2</label>
-                                    <select name="citizenship2" id="citizenship2">
-                                        <option value="">Select</option>
-                                        <option value="1"> Bangladesh</option>
-                                    </select>
-                                </div>
-                                <div class="fg hidden_fields">
-                                    <label for="citizenship3">Citizenship 3</label>
-                                    <select name="citizenship3" id="citizenship3">
-                                        <option value="">Select</option>
-                                        <option value="1"> Bangladesh</option>
-                                    </select>
-                                </div> -->
                             </div>
                         </div>
                         <div class="section">
@@ -292,10 +277,6 @@ require_once "includes/actions.php";
                                             <input type="tel" name="tel" id="tel" >
                                         </div>
                                     </span>
-                                </div>
-                                <div class="fg">
-                                   <label for="passport_number">Passport Number</label>
-                                   <input type="text" name="passport_number" id="passport_number" >
                                 </div>
                                 <div class="fg">
                                    <label for="emailaddress">Email Address</label>
