@@ -12,13 +12,11 @@ gulp.task('sass', () => {
 
 // Watch for the changes
 gulp.task('serve', ['sass'], () => {
-    browserSync.init({
-        server: './'
-    });
+    browserSync.init({ server: './' });
     gulp.watch(['sass/*.scss'], ['sass']);
     gulp.watch(['*.html','js/*.js']).on('change', browserSync.reload);
 });
 
 // Execute
 gulp.task('default', ['serve']);
-// Execution 
+
